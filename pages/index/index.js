@@ -62,7 +62,9 @@ Page({
   },
 
   aboutTap(){
-    console.log("22");
+    wx.navigateTo({
+      url: '../about/index',
+    })
   },
 
   commentTap(){
