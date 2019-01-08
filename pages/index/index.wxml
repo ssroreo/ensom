@@ -1,0 +1,17 @@
+<!--pages/index/index.wxml-->
+<view class="noticebar" bindtap='aboutTap'>
+<text class="nbtext">ensom</text>
+</view>
+<view class="main">
+<block wx:for="{{comment}}" wx:key="id">
+  <view class="content" id="{{item.id}}">
+  <!-- <view class="user">李某</view> -->
+    {{item.comment}}
+  </view>
+</block>
+</view>
+<view>
+  <button class="circle-float" bindtap='commentTap'>
+    <image class="publish" src="../../images/publish2.png"  mode='widthFix'></image>
+  </button>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/comment/index.wxml-->
+<view class="content">
+  <textarea placeholder="写下点什么" value='{{textareaVal}}' bindinput='textarea' minlength="{{min}}" maxlength="{{max}}">
+  <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
+  <text class="hint">{{texts}}</text>
+  </textarea>
+  <button bindtap='submitText' class="submit">发布</button>
+  <text class="tips">{{tiptext}}</text>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/welcome/welcome.wxml-->
+<view>
+<image class="background" src="../../images/background.jpeg" mode='widthFix' bindtap='imgTap'></image>
+</view>

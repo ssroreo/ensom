@@ -1,0 +1,14 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/welcome/welcome",
+    "pages/comment/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1c2438",
+    "navigationBarTitleText": "ensom",
+    "navigationBarTextStyle": "white"
+  }
+}

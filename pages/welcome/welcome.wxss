@@ -1,0 +1,5 @@
+/* pages/welcome/welcome.wxss */
+.background {
+  display: block;
+  width: 100%;
+}
