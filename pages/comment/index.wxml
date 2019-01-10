@@ -4,6 +4,9 @@
   <text class="currentWordNumber">{{currentWordNumber|0}}/{{max}}</text>
   <text class="hint">{{texts}}</text>
   </textarea>
-  <button bindtap='submitText' class="submit">发布</button>
-  <text class="tips">{{tiptext}}</text>
+  <button bindtap='submitText' class="submit" disabled='{{btndisable}}'>发布</button>
+</view>
+
+<view class="container">
+  <view class='anit {{show?"show":""}}' style="background:{{backgroundcolor}}">{{publishresult}}</view>
 </view>

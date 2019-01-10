@@ -1,17 +1,39 @@
 // pages/about/index.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    bian: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    app.AppMusic.src = 'https://music.163.com/song/media/outer/url?id=640565.mp3';
+  },
+
+  audioPlay: function () {
+    app.AppMusic.play();
+    app.AppMusic.onPlay(() => {
+      this.setData({
+        bian: true
+      })
+    })
+
+
+  },
+  audioPause: function () {
+    app.AppMusic.pause();
+    app.AppMusic.onPause(() => {
+      this.setData({
+        bian: false
+      })
+    })
+
 
   },
 

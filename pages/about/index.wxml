@@ -1,4 +1,13 @@
 <!--pages/about/index.wxml-->
 <view>
-<text class="main">pages/about/index.wxml</text>
+<text class="main">　　　能够搜到这个小程序的人一定是一个很孤独的人吧？\n　　　其实我做这个小程序的初衷，是在一个夜晚，我突然发现自己很孤独，甚至没有任何一个人可以倾诉。微信QQ朋友圈微博，我有上百个好友，却没有一个人能够在我最需要的时候坐在我身边，听我吐露自己的心声。\n　　　所以我就做了这样一个小程序，它不会索要你任何权限，也不会记录你的任何信息，甚至不会显示你的头像。在这里你只能发送文字，不能发送任何图片，因为这是一个真正的树洞。你甚至会发现，这个小程序从没做过任何推广，因为我认为，只有真正孤独的人才会找到它，才会需要它。\n　　　愿你每一个孤身的夜都不再寂寞。</text>
 </view>
+
+<view wx:if="{{bian == true}}">
+ <image src='../../images/music.png' bindtap="audioPause" style='width:42rpx;height:42rpx;position:absolute;top:1%;right:3%;' class="playmusic"></image>
+ </view>
+
+
+ <view wx:else="{{bian == false}}">
+        <image src='../../images/stopmusic.png' bindtap="audioPlay"  style='width:42rpx;height:42rpx;position:absolute;top:1%;right:3%;background-color:' class="stopmusic"></image> 
+ </view>

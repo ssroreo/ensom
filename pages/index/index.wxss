@@ -18,7 +18,7 @@
   height: 100rpx;
   border-radius: 50%;
   font-size: 28rpx;
-  background: #4682B4;
+  background: #1c2438;
 }
 
 .publish {

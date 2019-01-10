@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.3",
-	"appid": "wxf7659237907c3512",
+	"appid": "wx289ab4bd58b51b4f",
 	"projectname": "ensom",
 	"debugOptions": {
 		"hidedInDevtools": []

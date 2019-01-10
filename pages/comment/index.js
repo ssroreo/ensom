@@ -10,7 +10,24 @@ Page({
     max:2000,
     currentWordNumber:0,
     texts: '至少5个字',
-    tiptext:''
+    show: 0,
+    btndisable:false,
+    publishresult:'发布成功',
+    backgroundcolor:'green'
+  },
+
+  publish() {
+    if (!this.data.show) {
+      let that = this;
+      this.setData({
+        show: 1
+      })
+      setTimeout(function () {
+        that.setData({
+          show: 0
+        })
+      }, 2000)
+    }
   },
 
   textarea: function (e) {
@@ -41,31 +58,39 @@ Page({
     var len = parseInt(value.length);
     if(len<5) {
       that.setData({
-        tiptext:'发布失败，最少输入5个字！'
+        backgroundcolor:"red",
+        publishresult: '发布失败，最少输入5个字！'
       });
-      setTimeout(function(){
-        that.setData({
-          tiptext: ''
-        });
-      },1800);
+      that.publish();
       return;
     }
     else {
-      wx.request({
-        url: 'https://pokerin.top/ensom_server_war/CommentController', 
-        data: {
-          comment: that.data.textareaVal
-        },
-        header: {
-          'content-type': 'application/json' // 默认值
-        },
-        success(res) {
-          console.log(res.data)
-        }
+      that.setData({
+        backgroundcolor: "green",
+        publishresult: '发布成功'
       });
-      wx.navigateBack({
-        
-      })
+      that.publish();
+      that.setData({
+        btndisable:true
+      });
+      setTimeout(function(){
+        wx.request({
+          url: 'https://pokerin.top/ensom_server_war/CommentController',
+          data: {
+            comment: that.data.textareaVal
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success(res) {
+            console.log(res.data)
+          }
+        });
+        wx.navigateBack({
+
+        })
+      },1000);
+      
     }
   },
 
@@ -87,7 +112,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    that.setData({
+      btndisable: false,
+      publishresult:"发布成功",
+      backgroundcolor:"green"
+    });
   },
 
   /**

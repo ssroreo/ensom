@@ -5,6 +5,16 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    this.AppMusic = wx.createInnerAudioContext();
+    this.AppMusic.autoplay = false;
+    this.AppMusic.loop = true;
+    this.AppMusic.onPlay(() => {
+
+    })
+    this.AppMusic.onError((res) => {
+      console.log(res.errMsg)
+      console.log(res.errCode)
+    })
 
     // 登录
     wx.login({
