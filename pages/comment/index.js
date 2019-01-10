@@ -51,6 +51,18 @@ Page({
       return;
     }
     else {
+      wx.request({
+        url: 'https://pokerin.top/ensom_server_war/CommentController', 
+        data: {
+          comment: that.data.textareaVal
+        },
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success(res) {
+          console.log(res.data)
+        }
+      });
       wx.navigateBack({
         
       })
