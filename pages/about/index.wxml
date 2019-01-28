@@ -9,5 +9,5 @@
 
 
  <view wx:else="{{bian == false}}">
-        <image src='../../images/stopmusic.png' bindtap="audioPlay"  style='width:42rpx;height:42rpx;position:absolute;top:1%;right:3%;background-color:' class="stopmusic"></image> 
+        <image src='../../images/music.png' bindtap="audioPlay"  style='width:42rpx;height:42rpx;position:absolute;top:1%;right:3%;background-color:' class="stopmusic"></image> 
  </view>

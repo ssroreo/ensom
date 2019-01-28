@@ -4,6 +4,27 @@
   right: 0;
   margin: 15rpx;
   color: #bbbec4;
+  font-size: 9px;
+}
+
+
+.imagesize{
+ display:flex;
+ justify-content: center;
+}
+
+.stoprefresh {
+  width: 24px;
+}
+
+.playrefresh{
+  width: 24px;
+  transition: All 1s ease-in-out;
+  -webkit-transform: rotate(360deg);
+  animation: rotation 3s linear infinite;
+  -moz-animation: rotation 3s linear infinite;
+  -webkit-animation: rotation 3s linear infinite;
+  -o-animation: rotation 3s linear infinite;
 }
 
 .circle-float{

@@ -2,14 +2,13 @@
   "pages": [
     "pages/welcome/welcome",
     "pages/index/index",
-    
     "pages/comment/index",
     "pages/about/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#1c2438",
-    "navigationBarTitleText": "ensom",
+    "navigationBarTitleText": "树洞-孤独的我",
     "navigationBarTextStyle": "white"
   }
 }

@@ -1,14 +1,16 @@
 <!--pages/index/index.wxml-->
 <view class="noticebar" bindtap='aboutTap'>
-<text class="nbtext">ensom</text>
+<text class="nbtext">伤心桥下春波绿，曾是惊鸿照影来</text>
 </view>
 <view class="main">
 <block wx:for="{{comment}}" wx:key="id">
   <view class="content" id="{{item.id}}">
-  <!-- <view class="user">李某</view> -->
-    {{item.comment}}
+  <text>{{item.comment}}</text>
   </view>
 </block>
+<view class='imagesize'>
+  <image class="{{refresh}}" src="../../images/refresh.png" mode="widthFix" bindtap='refreshTap'></image>  
+</view>
 </view>
 <view>
   <button class="circle-float" bindtap='commentTap'>

@@ -1,5 +1,6 @@
 // pages/about/index.js
 var app = getApp();
+var musiclist = ['640565'];
 Page({
 
   /**
@@ -74,7 +75,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**

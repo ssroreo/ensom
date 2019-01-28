@@ -65,6 +65,7 @@ Page({
       return;
     }
     else {
+      console.log(that.data.textareaVal);
       that.setData({
         backgroundcolor: "green",
         publishresult: '发布成功'
@@ -80,7 +81,7 @@ Page({
             comment: that.data.textareaVal
           },
           header: {
-            'content-type': 'application/json' // 默认值
+            'content-type': 'application/json;charset=gbk' // 默认值
           },
           success(res) {
             console.log(res.data)
