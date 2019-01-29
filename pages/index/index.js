@@ -55,7 +55,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'http://pokerin.top/ensom_server_war/ShowComment',
+      url: 'https://pokerin.top/ensom_server_war/ShowComment',
       header: {
         'content-type': 'application/json;charset=gbk' // 默认值
       },

@@ -19,7 +19,7 @@ Page({
    */
   onLoad: function (options) {
     setTimeout(function(){
-      wx.navigateTo({
+      wx.redirectTo({
         url: '/pages/index/index',
       });
     },1500);
